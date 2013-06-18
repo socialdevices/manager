@@ -1,6 +1,6 @@
-==========
-Controller
-==========
+=======
+Manager
+=======
 
-Controller is the main hub of the Social Devices Platform and is responsible for
-the interaction between the different components within the SDP.
+Manager is responsible for maintaining information about users, their devices,
+and device context.
