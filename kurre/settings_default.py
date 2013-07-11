@@ -241,8 +241,8 @@ MIRRI = {
 }
 
 CAAS = {
-    'HOST': 'kurre.cs.hut.fi',
-    'PORT': 8009,
+    'HOST': '',
+    'PORT': 80,
     'CONFIGURATOR': 'wcrl'
 }
 
