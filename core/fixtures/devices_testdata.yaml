@@ -1,0 +1,178 @@
+- model: core.device
+  pk: 1
+  fields:
+    created_at: 2011-12-19T16:21:43.834112
+    is_reserved: False
+    mac_address: aa:aa:aa:aa:aa:aa
+    name: Device one
+    updated_at: 2011-12-20T12:49:03.998318
+- model: core.device
+  pk: 2
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    is_reserved: True
+    mac_address: bb:bb:bb:bb:bb:bb
+    name: Device two
+    updated_at: 2011-12-20T17:10:41.314132
+- model: core.device
+  pk: 3
+  fields:
+    created_at: 2011-12-21T16:21:43.834112
+    is_reserved: False
+    mac_address: cc:cc:cc:cc:cc:cc
+    name: Device three
+    updated_at: 2011-12-21T18:49:03.998318
+- model: core.device
+  pk: 4
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    is_reserved: True
+    mac_address: dd:dd:dd:dd:dd:dd
+    name: Device four
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.interface
+  pk: 1
+  fields:
+    created_at: 2011-12-20T16:21:43.834112
+    name: TalkingDevice
+    updated_at: 2011-12-20T16:21:43.834112
+- model: core.interface
+  pk: 2
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    name: SingingDevice
+    updated_at: 2011-12-23T18:49:03.998318
+- model: core.interface
+  pk: 3
+  fields:
+    created_at: 2011-12-25T18:21:43.834112
+    name: CalendarDevice
+    updated_at: 2011-12-27T20:49:03.998318
+- model: core.interface
+  pk: 4
+  fields:
+    created_at: 2011-12-28T16:21:43.834112
+    name: ScreenDevice
+    updated_at: 2011-12-28T16:21:43.834112
+- model: core.interface
+  pk: 5
+  fields:
+    created_at: 2011-12-28T16:21:43.834112
+    name: CalendarSource
+    updated_at: 2011-12-28T16:21:43.834112
+- model: core.method
+  pk: 1
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 1
+    name: isWilling
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 2
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 1
+    name: isSilent
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 3
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 5
+    name: eventApproaching
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 4
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 4
+    name: screenAvailable
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 5
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 4
+    name: hasNext
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 6
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 3
+    name: hasEvents
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.deviceinterface
+  pk: 1
+  fields:
+    created_at: 2011-12-19T16:21:43.912345
+    device: 1
+    interface: 1
+- model: core.deviceinterface
+  pk: 2
+  fields:
+    created_at: 2011-12-19T16:21:43.834112
+    device: 1
+    interface: 2
+- model: core.deviceinterface
+  pk: 3
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    device: 2
+    interface: 3
+- model: core.deviceinterface
+  pk: 4
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    device: 2
+    interface: 4
+- model: core.deviceinterface
+  pk: 5
+  fields:
+    created_at: 2011-12-19T16:21:43.912345
+    device: 1
+    interface: 5
+- model: core.deviceinterface
+  pk: 6
+  fields:
+    created_at: 2011-12-19T16:21:43.912345
+    device: 1
+    interface: 4
+- model: core.methodparameter
+  pk: 1
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    method: 3
+    name: eid
+    updated_at: 2011-12-20T17:10:41.314132
+- model: core.methodparameter
+  pk: 2
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    method: 5
+    name: screenId
+    updated_at: 2011-12-20T17:10:41.314132
+- model: core.statevalue
+  pk: 1
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    device: 1
+    method: 1
+    updated_at: 2011-12-20T17:10:41.314132
+    value: False
+- model: core.statevalue
+  pk: 2
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    device: 1
+    method: 5
+    updated_at: 2011-12-20T17:10:41.314132
+    value: False
+- model: core.statevalueargument
+  pk: 1
+  fields:
+    created_at: 2011-12-20T17:10:41.314132
+    method_parameter: 2
+    state_value: 2
+    updated_at: 2011-12-20T17:10:41.314132
+    value: 1234

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<h1>
+User Profile
+</h1>
+
+
+<form class="form-horizontal" action="{% url registration.views.input_basic_user_details %}" method = "post" > {% csrf_token %}
+
+	<legend> Quick registration</legend> 
+	{% if in_use %}
+       		<div class="control-group error">
+		<span class="help-inline"> e-mail address already registered </span>
+	{% else %}
+       	<div class="control-group">
+	{% endif %}
+		<label class="control-label" for="id_username">Username:</label> 
+		<div class="controls" >
+			{{user_form.username}}
+		</div>
+	</div>
+
+	{% if user_form.password.errors %}
+       		<div class="control-group error">
+		<span class="help-inline"> 
+			<ul class="errorlist">{{user_form.password.errors}} </ul>
+		</span>
+	{% else %}
+	<div class="control-group">
+	{% endif %}
+		<label class="control-label" for="id_password">Password:</label> 
+		<div class="controls">		
+			{{user_form.password}}
+		</div>
+	</div>
+	
+	{% if user_profile_form.nickname.errors %}
+       		<div class="control-group error">
+		<span class="help-inline"> 
+			<ul class="errorlist">{{user_profile_form.nickname.errors}} </ul>
+		</span>
+	{% else %}
+	<div class="control-group">
+	{% endif %}
+		<label class="control-label" for="id_nickname">full name:</label> 
+		<div class="controls">
+			{{user_profile_form.nickname}}
+		</div>
+	</div>
+
+	<legend> Register with your FB account</legend> 
+	<div class="control-group">
+		<label class="control-label" for="FBemail">Email:</label> 
+		<div class="controls">
+			<input type="text" name="FBemail" id="FBemail" />
+		</div>
+	</div>	
+
+	<div class="control-group">
+		<label class="control-label" for="FBpwd">Password:</label> 
+		<div class="controls">	
+			<input type="password" name="FBpwd" id="FBpwd"/> 
+		</div>
+	</div>
+
+	{% if mac_address %}
+		<input type="hidden" name="mac_address" value="{{ mac_address }}"/>
+	{% endif %}
+	<div class="control-group">
+		<div class="controls"> 
+			<button class="btn btn-primary" type="submit" Value="Submit">Submit</button>
+        		<button class="btn" type="reset" Value="Reset">Clear</button> 
+		</div>
+	</div> 
+</form>
+  
+
+
+{% if user_form.errors %}
+    <ol>
+    {% for error in user_form.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+{% endif %}
+{% if user_profile_form.errors %}
+    <ol>
+    {% for error in user_form.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ol>
+{% endif %}
+
+{% endblock %}

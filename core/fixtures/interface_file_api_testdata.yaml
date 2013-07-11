@@ -1,0 +1,20 @@
+- model: core.interface
+  pk: 1
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    name: TalkingDeviceTest
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 1
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 1
+    name: isWilling
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 2
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 1
+    name: isSilent
+    updated_at: 2011-12-22T23:49:03.998318

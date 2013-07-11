@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<form class="form-horzintal" action="{% url registration.views.check_mac %}" method = "post" > {% csrf_token %}
+	<div class="control-group">
+		<label class="control-label" for="mac_address">MAC address:</label> 
+		<div class"controls">
+			<input type="text" name="mac_address" id="mac_address"/> 
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls"> 
+			<button class"btn btn-primary" type="submit" Value="Submit">Submit</button>
+		</div>
+        </div>
+</form>
+
+{% endblock %}

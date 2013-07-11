@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+	Log In
+</h1>
+
+<!--    <h1>Contact us</h1>
+
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form class="form-horizontal" action="/registration/login/" method="post">
+	{% csrf_token %}
+	<div class="control-group">
+        	<label for="subject">Subject:</label> <input type="text" name="subject">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+-->
+	
+<form class="form-horizontal" method="post" action="{% url registration.views.log_in %}">
+	{% csrf_token %}
+
+	{% if not_reg %}
+	<div class="control-group error">
+		<label class="control-label" for="username">Email:</label>
+		<div class="controls">
+			<input type="text" name="username" placeholder="Email">
+		</div>
+	</div>
+    	<div class="control-group error">
+	    	<label class="control-label" for="password">Password:</label>
+		<div class="controls">
+			<input type="password" name="password" placeholder="Password">
+		</div>
+	</div>
+	<div class="form-actions">
+		<input class="btn btn-primary" type="submit" value="login"/>
+		
+		{% if not_reg %}
+		<p class="well">Could not log you in, mail address not found.
+		Not registered? <a href="{% url registration.views.input_basic_user_details %}"> Registration</a> </p>
+		{%else%} {% if not_active %}
+		<span class="help-inline">Could not log you in, account disabled.</span>
+	 	{%endif%} {%endif%}
+		<input type="hidden" name="mac_address" value="{{ mac_address }}"/>
+        	<input type="hidden" name="next" value="{{ next }}">
+	</div>
+	{%else%}
+	<div class="control-group">
+		<label class="control-label" for="username">Email:</label>
+		<div class="controls">
+			<input type="text" name="username" placeholder="Email">
+		</div>
+	</div>
+    	<div class="control-group">
+	    	<label class="control-label" for="password">Password:</label>
+		<div class="controls">
+			<input type="password" name="password" placeholder="Password">
+		</div>
+	</div>
+	<div class="form-actions">
+        	<input type="hidden" name="next" value="{{ next }}"/>
+		<input type="hidden" name="mac_address" value="{{ mac_address }}"/>
+		<input class="btn btn-primary" type="submit" value="login"/>
+	</div>
+	{%endif%}
+
+</form>
+
+{% endblock %}
+ 
+ <!-- <div>
+		<label for="username">Username:</label><input type="text" name="username" id="username"/> 
+	</div>
+	<div>	
+		<label for="pwd">Password:</label><input type="password" name="pwd"/> 
+	</div>
+	<div class="submit">	
+		<div> <input type="submit" Value="Login"/> </div>
+        <div> <input type="reset" Value="Reset"/> </div>
+	</div>
+	
+-- >

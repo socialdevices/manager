@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<form method = "post" >
+	<! {{personal_details.as_ul}} --->
+	<p> Link to your your Facebook account</p> 
+	<div>
+		<label for="FBemail">Email:</label> <input type="text" name="FBemail" id="FBemail" />
+	</div>
+	<div>
+		<label for="FBpwd">Password:</label> <input type="password" name="FBpwd id="FBpwd"/> 
+	</div>
+	<p> Complete registration</p> 
+
+	<div>
+		<label for="firstname">First Name:</label> <input type="text" name="firstname" id="firstname" /> 
+	</div>
+	
+	<div>
+		<label for="lastname"> Last Name:</label> <input type="text" name="lastname" id="lastname" /> 
+	</div>
+	<div>
+		<label for="display">What to display:</label> <input type="text" name="display" id="display"/>
+	</div>
+	
+	<p>  Check box (what to display)</p>
+	
+	<div class="submit">
+		<div> <input type="submit" Value="Login"/> </div>
+                <div> <input type="reset" Value="Reset"/> </div>
+	</div>      
+</form>
+<div>
+	<a href="{% url registration.views.input_friends %}">Friends</a>
+</div>
+<div>
+       <a>Devices</a>
+</div>
+
+{% endblock %}

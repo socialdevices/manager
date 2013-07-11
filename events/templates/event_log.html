@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Event log{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/kurre.js"></script>
+{% endblock %}
+
+{% block sidebar %}
+<li class="nav-header"> Event log </li>
+<li><a href="/event_log/">Event log</a></li>
+{% endblock %}
+
+{% block content %}
+<legend>Event log</legend>
+
+<ul id="log">
+
+</ul>
+{% endblock %}

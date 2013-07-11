@@ -1,0 +1,10 @@
+- model: core.trigger
+  pk: 1
+  fields:
+    method: 2
+- model: core.schedule
+  pk: 1
+  fields:
+    trigger: 1
+    name: talkingDevicesSchedule
+    configuration_model_name: talk_configuration_model

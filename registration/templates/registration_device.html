@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if form_saved %} 
+<p> You've added a device</p> 
+<ul id="choices"> 
+	<li> <a href=#> Profile page   </a> </li>
+	<li> <a href=#> Exit registration </a> </li>
+		
+</ul>
+
+{% else %} 
+<form class="form-horizontal" action="{% url registration.views.input_device_details %}" method="post"> 
+	{% csrf_token %}
+
+	<legend>
+		Input device details
+	</legend>
+
+	{% if mac_address %}
+       	{% if device_form.mac_address.errors %}
+	<div class="control-group error">
+		<label class="control-label" for="mac_address">MAC: {{ mac_address }}</label> 
+		<input type="hidden" name="mac_address" value="{{ mac_address }}"/>
+	
+		<small>
+		<span class="help-inline">
+			{{device_form.mac_address.errors}} 
+                        <ul>
+				<li>Go to <a href="/">device management</a></li>
+			</ul>
+              	</span>
+		</small>
+	</div>
+	{% else %}
+	       
+    	<div class="control-group">
+		<label class="control-label" for="mac_address">MAC: {{ mac_address }}</label> 
+		<input type="hidden" name="mac_address" value="{{ mac_address }}"/>
+	</div>
+	{%endif%}
+
+	{% endif %}
+
+        {% if device_form.name.errors %}
+                <div class="control-group error">
+                <span class="help-inline">
+                        <ul class="errorlist">{{device_form.name.errors}} </ul>
+                </span>
+        {% else %}
+
+    	<div class="control-group">
+	{%endif%}
+		<label class="control-label" for="id_name">give it a name:</label> 
+		<div class="controls">
+			{{device_form.name}}
+		</div>
+	</div>
+
+        {% if device_form.type.errors %}
+                <div class="control-group error">
+                <span class="help-inline">
+                        <ul class="errorlist">{{device_form.type.errors}} </ul>
+                </span>
+        {% else %}
+
+	<div class="control-group">
+
+	{% endif %}
+
+		<label class="control-label" for="id_type">select type:</label> 
+		<div class="controls">
+			{{device_form.type}}
+		</div>
+	</div>
+	{% if username %}
+		<input type="hidden" name="username" value="{{ username }}"/>
+	{% endif %}
+	<div class="control-group">
+		<div class="controls"> 
+			<button class="btn btn-primary" type="submit" value="Submit">Submit</button> 
+		        <button class="btn" type="reset" value="Reset">Clear</button>
+		</div>
+	</div> 
+</form>
+{% endif %}
+{% endblock %}

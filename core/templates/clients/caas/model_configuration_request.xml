@@ -1,0 +1,9 @@
+<xml>
+<model name="{{ model_name }}" modelFormat="{{ model_format }}">
+{{ model }}
+</model>
+
+<configuration>
+{{ selections }}
+</configuration>
+</xml>

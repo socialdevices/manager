@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>{% block title %}Kurre{% endblock %}</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.css">
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.4.min.js"></script>
+</head>
+<body>	
+<div class="container-fluid">
+	<h1 class=well> Kurre </h1>
+	<div class="row-fluid">
+		<div class="span2">
+			<div class="well sidebar-nav">
+				<ul class="nav nav-list">
+					<li class="nav-header">Manager</li>
+					<li><a href="/">Main page</a></li>
+					<li><a href="/event_log/">Event log</a></li>
+					<li><a href="/docs/">Documentation</a></li>
+					{% block sidebar %} {% endblock %}
+
+					{% if user.is_authenticated %}
+					<li class="nav-header">Hello, {{user.username}}! </li>
+					<li><a href="{% url registration.views.log_out%}">Log Out</a></li>
+					{% else %}
+					<li class="nav-header">Hello, stranger! </li>
+					<li><a href="{% url registration.views.log_in%}">Log In</a></li>
+					{% endif %}
+				</ul>
+			</div>
+
+    		</div>
+
+    		<div class="well span10" id="content">
+      			<!--Body content-->
+			{% block content %}{% endblock %}
+			{% block javascript %}{% endblock %}
+
+    		</div>
+  	</div>
+</div>
+
+
+</body>
+
+</html>
+
+
+
+

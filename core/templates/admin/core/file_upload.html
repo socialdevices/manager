@@ -1,0 +1,51 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load adminmedia %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}admin/css/forms.css" />{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+     <a href="../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../">{{ app_label|capfirst|escape }}</a> &rsaquo;
+     {{ file_name|capfirst }} &rsaquo;
+     {% trans "Upload" %} {{ file_name }}
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <form enctype="multipart/form-data" action="{{ form_url }}" method="post" id="{{ form_id }}">{% csrf_token %}
+        <div>
+
+        {% if form.errors %}
+            <p class="errornote">
+            {% blocktrans count form.errors|length as counter %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+            </p>
+            {{ form.non_field_errors }}
+        {% endif %}
+
+        <fieldset class="module aligned">
+            <div class="form-row file{% if form.file.errors %} errors{% endif %}">
+                {{ form.file.errors }}
+                
+                <div>
+                    <label for="id_file" class="required">{{ file_name|capfirst }}:</label>
+                    {{ form.file }}
+                </div>
+                
+            </div>
+        </fieldset>
+
+        <div class="submit-row">
+            <input type="submit" value="{% trans 'Save' %}" class="default" name="_save" />
+        </div>
+
+        
+        <script type="text/javascript">document.getElementById("id_file").focus();</script>
+        
+
+        </div>
+    </form>
+</div>
+{% endblock %}

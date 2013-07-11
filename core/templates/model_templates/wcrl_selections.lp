@@ -1,0 +1,1 @@
+compute { {% for device in devices %}{% if device.role %}{{device.role}}(id{{device.id}}){% if not forloop.last %}, {% endif %}{% else %}{% for state in device.stateValues %}{{state.method}}(id{{device.id}},{{state.value}}){% if not forloop.last %}, {% endif %}{% endfor %}{% if not forloop.last %}, {% endif %}{% endif %}{% endfor %} }.

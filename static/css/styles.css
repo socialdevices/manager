@@ -1,0 +1,134 @@
+body {
+    background-color: #fff;
+    text-align: center;
+}
+
+h1 {
+	font-size: 153.9%;
+	font-weight: bold;
+	padding: 10px 0 10px 175px;
+}
+
+h2 {
+	font-size: 123.1%;
+	font-weight: bold;
+	padding-top: 40px;
+	padding-bottom: 5px;
+}
+
+a:link {
+	text-decoration : none;
+}
+
+
+
+form {
+	width: 800px;
+        margin: 20px auto;       /* added by Vittorio */
+	overflow: hidden;        
+	border: 1px solid #000; /* trying out stuff */
+}  
+
+label {
+	width: 120px;
+	float: left;
+	text-align: right;
+	padding: 0 5px;
+	
+}
+
+input, select {
+	width: 150px;
+	clear: left;
+	border: 1px solid #000; /* trying out stuff */
+}
+
+
+div#wrapper {
+	width: 900px;
+	margin: 20px auto;
+	text-align: left;
+	overflow: hidden;
+	padding-bottom: 150px;
+	border: 1px solid #000; /* trying out stuff */
+}
+
+/*form div {
+	margin: 10px 0px;
+        border: 1px solid #000;
+        float: left; 
+} */
+
+div.field_wrapper {
+	margin: 10px 0px;
+        border: 1px solid #000;
+        float: left; 
+}
+
+form p 
+{
+	clear: left;
+        margin: 10px 0;
+        border: 1px solid #000;
+         
+}
+
+
+
+img.download {
+        vertical-align: middle;   /* added by Vittorio */
+	border: 0;
+}
+
+div.image {
+	position: relative; 
+	width: 100%; /* for IE 6 */ /* added by Vittorio */
+}
+div.image a {                          /* added by Vittorio */
+	position: absolute;
+        top: 250px;                  
+        left: 400px; 
+        border: 1px solid #000;
+	width: 100px; /* for IE 6 */
+        text-align: center;
+}
+
+div.submit  {
+        clear: left;
+	overflow: hidden;
+        float: none;
+        width: 400px;
+	margin: 20px 130px;
+        border: 1px solid #000;    /* trying out stuff */
+}
+
+
+
+ul.nav li {
+	display: inline;
+}
+
+ul#registration {
+    list-style-type: none;
+}
+
+ul#log {
+    float: left;
+}
+
+ul#log li {
+    float: left;
+    clear: left;
+    margin-bottom: 5px;
+}
+
+ul#log li span.date {
+    width: 175px;
+    float: left;
+    font-family: "Courier New", Courier, monospace;
+}
+
+ul#log li span.description {
+    width: 725px;
+    float: left;
+}

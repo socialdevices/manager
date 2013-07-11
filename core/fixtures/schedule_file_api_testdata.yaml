@@ -1,0 +1,189 @@
+- fields: {created_at: !!timestamp '2012-02-15 13:31:02.626588', 
+    name: TalkingDevice, updated_at: !!timestamp '2012-02-15 13:31:02.626689'}
+  model: core.interface
+  pk: 1
+- fields: {created_at: !!timestamp '2012-02-15 13:31:22.979961', 
+    name: CalendarSource, updated_at: !!timestamp '2012-02-15 13:31:22.980041'}
+  model: core.interface
+  pk: 2
+- fields: {created_at: !!timestamp '2012-02-15 13:31:02.683975', interface: 1, name: isWilling,
+    return_data_type: null, updated_at: !!timestamp '2012-02-15 13:31:02.684085'}
+  model: core.method
+  pk: 1
+- fields: {created_at: !!timestamp '2012-02-15 13:31:02.698075', interface: 1, name: isSilent,
+    return_data_type: null, updated_at: !!timestamp '2012-02-15 13:31:02.698146'}
+  model: core.method
+  pk: 2
+- fields: {created_at: !!timestamp '2012-02-15 13:31:23.041909', interface: 2, name: eventApproaching,
+    return_data_type: null, updated_at: !!timestamp '2012-02-15 13:31:23.041985'}
+  model: core.method
+  pk: 3
+- fields: {created_at: !!timestamp '2012-02-15 13:31:23.056183', data_type: null,
+    method: 3, name: eid, updated_at: !!timestamp '2012-02-15 13:31:23.056286'}
+  model: core.methodparameter
+  pk: 1
+- fields: {created_at: !!timestamp '2012-02-15
+      13:31:39.665197', name: Dialog, precondition_expression: '(? and ? and ?)',
+    updated_at: !!timestamp '2012-02-15 13:31:39.665272'}
+  model: core.action
+  pk: 1
+- fields: {created_at: !!timestamp '2012-02-15
+      13:31:55.077945', name: ConversationOfThree, precondition_expression: '(? and
+      ? and ? and ?)', updated_at: !!timestamp '2012-02-15 13:31:55.078026'}
+  model: core.action
+  pk: 2
+- fields: {created_at: !!timestamp '2012-02-15
+      13:32:08.965807', name: Conversation, precondition_expression: '(?)', updated_at: !!timestamp '2012-02-15
+      13:32:08.965944'}
+  model: core.action
+  pk: 3
+- fields: {created_at: !!timestamp '2012-02-15
+      13:32:28.133808', name: FakeCall, precondition_expression: '(?)', updated_at: !!timestamp '2012-02-15
+      13:32:28.133889'}
+  model: core.action
+  pk: 4
+- fields: {created_at: !!timestamp '2012-02-15 13:31:02.721396', method: 2, updated_at: !!timestamp '2012-02-15
+      13:31:02.721463'}
+  model: core.trigger
+  pk: 1
+- fields: {created_at: !!timestamp '2012-02-15 13:31:23.070990', method: 3, updated_at: !!timestamp '2012-02-15
+      13:31:23.071079'}
+  model: core.trigger
+  pk: 2
+- fields: {action: 1, created_at: !!timestamp '2012-02-15 13:31:39.738007', name: d2,
+    parameter_position: 1, updated_at: !!timestamp '2012-02-15 13:31:39.738137'}
+  model: core.actiondevice
+  pk: 1
+- fields: {action: 1, created_at: !!timestamp '2012-02-15 13:31:39.802164', name: d1,
+    parameter_position: 0, updated_at: !!timestamp '2012-02-15 13:31:39.802264'}
+  model: core.actiondevice
+  pk: 2
+- fields: {action: 2, created_at: !!timestamp '2012-02-15 13:31:55.119385', name: d2,
+    parameter_position: 1, updated_at: !!timestamp '2012-02-15 13:31:55.119493'}
+  model: core.actiondevice
+  pk: 3
+- fields: {action: 2, created_at: !!timestamp '2012-02-15 13:31:55.146607', name: d3,
+    parameter_position: 2, updated_at: !!timestamp '2012-02-15 13:31:55.146734'}
+  model: core.actiondevice
+  pk: 4
+- fields: {action: 2, created_at: !!timestamp '2012-02-15 13:31:55.162314', name: d1,
+    parameter_position: 0, updated_at: !!timestamp '2012-02-15 13:31:55.162382'}
+  model: core.actiondevice
+  pk: 5
+- fields: {action: 3, created_at: !!timestamp '2012-02-15 13:32:08.999238', name: source,
+    parameter_position: 0, updated_at: !!timestamp '2012-02-15 13:32:08.999411'}
+  model: core.actiondevice
+  pk: 6
+- fields: {action: 3, created_at: !!timestamp '2012-02-15 13:32:09.058577', name: d2,
+    parameter_position: 1, updated_at: !!timestamp '2012-02-15 13:32:09.058705'}
+  model: core.actiondevice
+  pk: 7
+- fields: {action: 3, created_at: !!timestamp '2012-02-15 13:32:09.074205', name: d3,
+    parameter_position: 2, updated_at: !!timestamp '2012-02-15 13:32:09.074272'}
+  model: core.actiondevice
+  pk: 8
+- fields: {action: 4, created_at: !!timestamp '2012-02-15 13:32:28.188715', name: d2,
+    parameter_position: 1, updated_at: !!timestamp '2012-02-15 13:32:28.188789'}
+  model: core.actiondevice
+  pk: 9
+- fields: {action: 4, created_at: !!timestamp '2012-02-15 13:32:28.219192', name: d1,
+    parameter_position: 0, updated_at: !!timestamp '2012-02-15 13:32:28.219263'}
+  model: core.actiondevice
+  pk: 10
+- fields: {action_device: 1, created_at: !!timestamp '2012-02-15 13:31:39.780883',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 1
+- fields: {action_device: 2, created_at: !!timestamp '2012-02-15 13:31:39.829487',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 2
+- fields: {action_device: 3, created_at: !!timestamp '2012-02-15 13:31:55.134315',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 3
+- fields: {action_device: 4, created_at: !!timestamp '2012-02-15 13:31:55.157349',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 4
+- fields: {action_device: 5, created_at: !!timestamp '2012-02-15 13:31:55.172917',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 5
+- fields: {action_device: 6, created_at: !!timestamp '2012-02-15 13:32:09.033469',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 6
+- fields: {action_device: 6, created_at: !!timestamp '2012-02-15 13:32:09.047029',
+    interface: 2}
+  model: core.actiondeviceinterface
+  pk: 7
+- fields: {action_device: 7, created_at: !!timestamp '2012-02-15 13:32:09.069366',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 8
+- fields: {action_device: 8, created_at: !!timestamp '2012-02-15 13:32:09.088094',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 9
+- fields: {action_device: 9, created_at: !!timestamp '2012-02-15 13:32:28.209012',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 10
+- fields: {action_device: 10, created_at: !!timestamp '2012-02-15 13:32:28.229223',
+    interface: 1}
+  model: core.actiondeviceinterface
+  pk: 11
+- fields: {action_device: 10, created_at: !!timestamp '2012-02-15 13:32:28.237549',
+    interface: 2}
+  model: core.actiondeviceinterface
+  pk: 12
+- fields: {action: 1, action_device: 2, created_at: !!timestamp '2012-02-15 13:31:39.859264',
+    expression_position: 0, method: 1, updated_at: !!timestamp '2012-02-15 13:31:39.859421'}
+  model: core.actionpreconditionmethod
+  pk: 1
+- fields: {action: 1, action_device: 1, created_at: !!timestamp '2012-02-15 13:31:39.914175',
+    expression_position: 1, method: 1, updated_at: !!timestamp '2012-02-15 13:31:39.915224'}
+  model: core.actionpreconditionmethod
+  pk: 2
+- fields: {action: 1, action_device: 2, created_at: !!timestamp '2012-02-15 13:31:39.954208',
+    expression_position: 2, method: 2, updated_at: !!timestamp '2012-02-15 13:31:39.954543'}
+  model: core.actionpreconditionmethod
+  pk: 3
+- fields: {action: 2, action_device: 5, created_at: !!timestamp '2012-02-15 13:31:55.201571',
+    expression_position: 0, method: 1, updated_at: !!timestamp '2012-02-15 13:31:55.201637'}
+  model: core.actionpreconditionmethod
+  pk: 4
+- fields: {action: 2, action_device: 3, created_at: !!timestamp '2012-02-15 13:31:55.219430',
+    expression_position: 1, method: 1, updated_at: !!timestamp '2012-02-15 13:31:55.219506'}
+  model: core.actionpreconditionmethod
+  pk: 5
+- fields: {action: 2, action_device: 4, created_at: !!timestamp '2012-02-15 13:31:55.259704',
+    expression_position: 2, method: 1, updated_at: !!timestamp '2012-02-15 13:31:55.259848'}
+  model: core.actionpreconditionmethod
+  pk: 6
+- fields: {action: 2, action_device: 5, created_at: !!timestamp '2012-02-15 13:31:55.289140',
+    expression_position: 3, method: 2, updated_at: !!timestamp '2012-02-15 13:31:55.289216'}
+  model: core.actionpreconditionmethod
+  pk: 7
+- fields: {action: 3, action_device: 6, created_at: !!timestamp '2012-02-15 13:32:09.110596',
+    expression_position: 0, method: 3, updated_at: !!timestamp '2012-02-15 13:32:09.110672'}
+  model: core.actionpreconditionmethod
+  pk: 8
+- fields: {action: 4, action_device: 10, created_at: !!timestamp '2012-02-15 13:32:28.247446',
+    expression_position: 0, method: 3, updated_at: !!timestamp '2012-02-15 13:32:28.247525'}
+  model: core.actionpreconditionmethod
+  pk: 9
+- fields: {configuration_model_name: talkingDevicesSCHTest, created_at: !!timestamp '2012-02-15
+      17:21:18.577939', name: talkingDevicesSCHTest,
+    trigger: 1, updated_at: !!timestamp '2012-02-15 17:21:19.430117'}
+  model: core.schedule
+  pk: 1
+- fields: {action: 1, created_at: !!timestamp '2012-02-15 17:21:18.650332', schedule: 1,
+    trigger_device: 2}
+  model: core.scheduleaction
+  pk: 1
+- fields: {action: 2, created_at: !!timestamp '2012-02-15 17:21:18.705125', schedule: 1,
+    trigger_device: 5}
+  model: core.scheduleaction
+  pk: 2

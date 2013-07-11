@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    var script_ver="Unknown";
+	if (navigator.appVersion.indexOf("Win")!=-1) script_ver="vbs";
+	if (navigator.appVersion.indexOf("Mac")!=-1) script_ver="sh";
+	if (navigator.appVersion.indexOf("X11")!=-1) script_ver="sh";
+	if (navigator.appVersion.indexOf("Linux")!=-1) script_ver="sh";
+	if (navigator.appVersion.indexOf("MeeGo")!=-1) script_ver="sh";
+	
+	document.write('Loading thinclient.'+script_ver);
+	 
+	window.onload = function(){document.location = 'thinclient.' + script_ver;}
+</script>

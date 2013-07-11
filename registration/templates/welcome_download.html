@@ -1,0 +1,28 @@
+{% extends "login.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block sidebar %}
+<li class="nav-header">Device manager</li>
+<li><a href="#">Dm menu items</li>
+{% endblock %}
+
+{% block content %}
+{%if user.is_anonymous %}
+	{{block.super}}
+
+{% else %}
+<legend> Hi, {{user.username}}!</legend>
+
+	<legend> Device client options</legend>
+	<div class="row-fluid">
+		<a class="btn btn-primary" href="http://visualrest.cs.tut.fi:8000/client/download"> Download stable python client build. (recommended)</a>
+		<a class="btn" href="http://visualrest.cs.tut.fi:8000/client/downloadSVNCurrent"> Download the latest build </a>
+	</div>
+	
+	<!--a class="btn btn-primary" href="http://visualrest.cs.tut.fi:8000/client/downloadSVNCurrent"> <img src="http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/64/Download-icon.png" class="download"/> Download the latest build </a-->
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,114 @@
+- model: core.interface
+  pk: 1
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    name: TalkingDevice
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.interface
+  pk: 2
+  fields:
+    created_at: 2011-12-23T17:10:15.216246
+    name: CalendarSource
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.method
+  pk: 1
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 1
+    name: isWilling
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 2
+  fields:
+    created_at: 2011-12-22T16:21:43.834112
+    interface: 1
+    name: isSilent
+    updated_at: 2011-12-22T23:49:03.998318
+- model: core.method
+  pk: 3
+  fields:
+    created_at: 2011-12-23T17:10:15.216246
+    interface: 2
+    name: eventApproaching
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.methodparameter
+  pk: 1
+  fields:
+    created_at: 2011-12-23T17:10:15.216246
+    method: 3
+    name: eid
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.trigger
+  pk: 1
+  fields:
+    created_at: 2011-12-23T17:10:15.216246
+    method: 2
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.trigger
+  pk: 2
+  fields:
+    created_at: 2011-12-23T17:10:15.216246
+    method: 3
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.action
+  pk: 1
+  fields:
+    created_at: 2011-12-23T17:10:15.216246
+    name: DialogTest
+    precondition_expression: (? and ? and ?)
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.actiondevice
+  pk: 1
+  fields:
+    action: 1
+    created_at: 2011-12-23T17:10:15.216246
+    name: d1
+    parameter_position: 0
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.actiondevice
+  pk: 2
+  fields:
+    action: 1
+    created_at: 2011-12-23T17:10:15.216246
+    name: d2
+    parameter_position: 1
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.actiondeviceinterface
+  pk: 1
+  fields:
+    action_device: 1
+    created_at: 2011-12-23T17:10:15.216246
+    interface: 1
+- model: core.actiondeviceinterface
+  pk: 2
+  fields:
+    action_device: 2
+    created_at: 2011-12-23T17:10:15.216246
+    interface: 1
+- model: core.actionpreconditionmethod
+  pk: 1
+  fields:
+    action: 1
+    action_device: 1
+    created_at: 2011-12-23T17:10:15.216246
+    expression_position: 0
+    method: 1
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.actionpreconditionmethod
+  pk: 2
+  fields:
+    action: 1
+    action_device: 2
+    created_at: 2011-12-23T17:10:15.216246
+    expression_position: 1
+    method: 1
+    updated_at: 2011-12-23T17:10:15.216246
+- model: core.actionpreconditionmethod
+  pk: 3
+  fields:
+    action: 1
+    action_device: 1
+    created_at: 2011-12-23T17:10:15.216246
+    expression_position: 2
+    method: 2
+    updated_at: 2011-12-23T17:10:15.216246
